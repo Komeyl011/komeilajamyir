@@ -1,0 +1,11 @@
+{
+  "port": 80,
+  "platform": "laravel",
+  "app": "timmy",
+  "build": {
+    "location": "iran"
+  },
+  "laravel": {
+    "phpVersion": "8.2"
+  }
+}

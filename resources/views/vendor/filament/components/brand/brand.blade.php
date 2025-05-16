@@ -1,0 +1,1 @@
+<img src="{{ Storage::disk('liara')->url('komeil_aj_logo.jpg') }}" alt="Logo" class="w-full h-full">
