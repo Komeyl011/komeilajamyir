@@ -135,8 +135,13 @@ return [
         'plural_label' => 'دسته‌بندی‌ها',
         'model_label' => 'دسته‌بندی',
         'table' => [
-            'name' => [
+            'name_translated' => [
                 'type' => 'text',
+                'required' => true,
+                'label' => 'نام',
+            ],
+            'name' => [
+                'type' => 'ignore',
                 'required' => true,
                 'label' => 'نام',
             ],
@@ -338,7 +343,7 @@ return [
                 'required' => true,
                 'label' => 'نویسنده',
             ],
-            'category.name' => [
+            'category.name_translated' => [
                 'type' => 'text',
                 'required' => true,
                 'label' => 'دسته بندی',

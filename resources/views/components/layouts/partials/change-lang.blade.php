@@ -1,14 +1,9 @@
-<form action="{{ route('language.change') }}" method="post"
-        class="wrapper {!! app()->getLocale() === 'fa' ? 'flex-row-reverse' : 'flex-row' !!}">
-    @csrf
-    <input onchange="this.form.submit()" type="radio" name="lang" id="en" value="en" {!! app()->getLocale() === 'en' ? 'checked' : '' !!}>
-    <input onchange="this.form.submit()" type="radio" name="lang" id="farsi" value="fa" {!! app()->getLocale() === 'fa' ? 'checked' : '' !!}>
-    <label for="en" class="option en hover:cursor-pointer">
-        <div class="dot"></div>
-        <span>{!! __('langbtn.english') !!}</span>
-    </label>
-    <label for="farsi" class="option farsi hover:cursor-pointer">
-        <div class="dot"></div>
-        <span>{!! __('langbtn.persian') !!}</span>
-    </label>
-</form>
+<div class="flex gap-2 w-full">
+    @foreach (App\Http\Middleware\LanguageMiddleware::scanLanguages() as $lang)
+        <button 
+            wire:click="switchLanguage('{{ $lang }}')" 
+            class="flex flex-col justify-center items-center w-full px-3 py-1 rounded {{ $currentLocale === $lang ? $selected_btn_bg : $default_btn_bg }}">
+            <img src="https://flagcdn.com/16x12/{{ __("langbtn.flags.{$lang}") }}.png" alt="US flag" class="me-2"> {{ __("langbtn.{$lang}") }}
+        </button>
+    @endforeach
+</div>

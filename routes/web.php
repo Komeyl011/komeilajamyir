@@ -24,10 +24,6 @@ Route::group(['middleware' => 'web'], function () {
 
     Route::post('/contact', \App\Http\Controllers\ContactMeController::class)->name('contact-form.store')->domain(env('APP_URL'));
 
-    Route::get('/fd/topics', \App\Livewire\FreeDiscussion::class)->name(name: 'fd.topics');
-    Route::get('/wr/doc', \App\Livewire\WritingDoc::class)->name(name: 'writing.doc');
-    Route::get('/currencies', [\App\Http\Controllers\CurrencyPrice::class, "index"])->name(name: 'currency.prices');
-
     Route::group(['namespace' => 'App\Livewire'], function () {
         Route::domain(env('APP_URL'))->group(function () {
             Route::get('/', 'Main')->name('home');

@@ -136,8 +136,13 @@ return [
         'plural_label' => 'Categories',
         'model_label' => 'Category',
         'table' => [
-            'name' => [
+            'name_translated' => [
                 'type' => 'text',
+                'required' => true,
+                'label' => 'name',
+            ],
+            'name' => [
+                'type' => 'ignore',
                 'required' => true,
                 'label' => 'name',
             ],
@@ -332,7 +337,7 @@ return [
                 'required' => true,
                 'label' => 'author',
             ],
-            'category.name' => [
+            'category.name_translated' => [
                 'type' => 'text',
                 'required' => true,
                 'label' => 'category',
@@ -352,7 +357,7 @@ return [
                 'label' => 'title (SEO)',
             ],
             'image' => [
-                'type' => 'text',
+                'type' => 'image',
                 'required' => true,
                 'label' => 'image',
             ],

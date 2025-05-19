@@ -41,12 +41,4 @@ class LanguageMiddleware
 
         return $dirs;
     }
-
-    /**
-     * Return the list of locales
-     */
-    public static function listLocales(): array
-    {
-
-    }
 }

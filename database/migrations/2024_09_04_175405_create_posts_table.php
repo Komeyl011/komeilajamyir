@@ -23,7 +23,7 @@ return new class extends Migration
             $table->jsonb('title');
             $table->jsonb('seo_title')->nullable();
             $table->string('image', 255);
-            $table->string('slug', 50);
+            $table->string('slug', 255);
             $table->jsonb('meta_description')->nullable();
             $table->jsonb('meta_keywords')->nullable();
             $table->enum('status', ['PUBLISHED', 'DRAFT', 'PENDING'])->default('DRAFT');

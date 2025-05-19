@@ -113,15 +113,17 @@ class PostResource extends BaseResource
 
                         return "$resource/$uuid/" . now()->format('YmdHis') . '.' . $file->getClientOriginalExtension();
                     }),
-                Forms\Components\TextInput::make('slug')
-                    ->required()
-                    ->label(__('filament::resources.post.table.slug.label'))
-                    ->extraAttributes(['dir' => 'ltr']),
+                // Forms\Components\TextInput::make('slug')
+                //     ->required()
+                //     ->label(__('filament::resources.post.table.slug.label'))
+                //     ->extraAttributes(['dir' => 'ltr']),
 
                 Forms\Components\Select::make('category_id')
                     ->label(__('filament::resources.post.table.category.label'))
                     ->required()
-                    ->options(fn () => Category::query()->pluck('name', 'id')),
+                    ->options(fn () => Category::all()->mapWithKeys(function ($category) {
+                        return [$category->id => $category->name_translated];
+                    })),
                 Forms\Components\Select::make('status')
                     ->label(__('filament::resources.post.table.status.label'))
                     ->required()

@@ -29,12 +29,15 @@ class CategoryResource extends BaseResource
     {
         return $form
             ->schema([
-                Forms\Components\TextInput::make('name')
-                    ->label(__('filament::resources.category.table.name.label'))
+                Forms\Components\TextInput::make('name_translated_en')
+                    ->label(__('filament::resources.category.table.name.label') . '(' . __('langbtn.en') . ')')
                     ->required(),
-                Forms\Components\TextInput::make('slug')
-                    ->label(__('filament::resources.category.table.slug.label'))
+                Forms\Components\TextInput::make('name_translated_fa')
+                    ->label(__('filament::resources.category.table.name.label') . '(' . __('langbtn.fa') . ')')
                     ->required(),
+                // Forms\Components\TextInput::make('slug')
+                //     ->label(__('filament::resources.category.table.slug.label'))
+                //     ->required(),
             ]);
     }
 

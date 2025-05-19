@@ -126,78 +126,7 @@
         font-weight: 900;
         font-style: italic;
     }
-
-    .wrapper {
-        display: flex;
-        background: #fff;
-        height: 100px;
-        width: 100%;
-        align-items: center;
-        justify-content: space-evenly;
-        border-radius: 5px;
-        padding: 20px 15px;
-        box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.2);
-    }
-    .wrapper .option {
-        background: #fff;
-        height: 100%;
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: space-evenly;
-        margin: 0 10px;
-        border-radius: 5px;
-        cursor: pointer;
-        padding: 0 10px;
-        border: 2px solid lightgrey;
-        transition: all 0.3s ease;
-    }
-    .wrapper .option .dot {
-        height: 20px;
-        width: 20px;
-        background: #d9d9d9;
-        border-radius: 50%;
-        position: relative;
-    }
-    .wrapper .option .dot::before {
-        position: absolute;
-        content: "";
-        top: 4px;
-        left: 4px;
-        width: 12px;
-        height: 12px;
-        background: #0069d9;
-        border-radius: 50%;
-        opacity: 0;
-        transform: scale(1.5);
-        transition: all 0.3s ease;
-    }
-    input[type="radio"] {
-        display: none;
-    }
-    #en:checked:checked ~ .en,
-    #farsi:checked:checked ~ .farsi {
-        border-color: #0069d9;
-        background: #0069d9;
-    }
-    #en:checked:checked ~ .en .dot,
-    #farsi:checked:checked ~ .farsi .dot {
-        background: #fff;
-    }
-    #en:checked:checked ~ .en .dot::before,
-    #farsi:checked:checked ~ .farsi .dot::before {
-        opacity: 1;
-        transform: scale(1);
-    }
-    .wrapper .option span {
-        font-size: 20px;
-        color: #808080;
-    }
-    #en:checked:checked ~ .en span,
-    #farsi:checked:checked ~ .farsi span {
-        color: #fff;
-    }
-
+    
     .page_404 {
         padding: 40px 0;
         background: #fff;

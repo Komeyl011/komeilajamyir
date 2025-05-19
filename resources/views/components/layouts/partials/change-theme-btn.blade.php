@@ -1,0 +1,1 @@
+<button id="theme-toggle" class="w-full px-3 py-1 rounded bg-indigo-500 dark:bg-indigo-800 hover:bg-indigo-600 text-white"></button>

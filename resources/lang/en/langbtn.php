@@ -6,4 +6,9 @@ return [
 
     'fa' => 'Persian',
     'en' => 'English',
+
+    'flags' => [
+        'en' => 'us',
+        'fa' => 'ir',
+    ],
 ];

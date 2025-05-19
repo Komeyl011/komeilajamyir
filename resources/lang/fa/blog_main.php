@@ -6,6 +6,7 @@ return [
     'nav_item_contact' => 'تماس',
     'search_bar' => 'جستجو...',
     'filter_default' => 'تمام دسته‌بندی‌ها',
+    'no_post' => 'در حال حاضر پستی وجود ندارد.',
 
     'post' => [
         'posted_by' => 'توسط :name در :date',

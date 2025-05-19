@@ -12,6 +12,11 @@ class Category extends Model
     protected $table = 'categories';
     protected $fillable = ['name', 'slug'];
 
+    public function getNameTranslatedAttribute()
+    {
+        return json_decode($this->attributes['name'])->{app()->currentLocale()};
+    }
+
     public function posts()
     {
         return $this->hasMany(Post::class);
